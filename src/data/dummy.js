@@ -427,34 +427,15 @@ export const links = [
       },
       {
         name: 'kanban',
+        // onclick("http://localhost:4000/"),
         icon: <BsKanban />,
+      
       },
       {
         name: 'editor',
         icon: <FiEdit />,
       },
     ],
-  },
-];
-
-export const cartData = [
-  {
-
-    name: 'butterscotch ice-cream',
-    category: 'Milk product',
-    price: '$250',
-  },
-  {
-
-    name: 'Supreme fresh tomato',
-    category: 'Vegetable Item',
-    price: '$450',
-  },
-  {
-
-    name: 'Red color candy',
-    category: 'Food Item',
-    price: '$190',
   },
 ];
 
