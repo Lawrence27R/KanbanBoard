@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Customers, Editor } from './pages';
+import { Home, Projects, Calendar, Members, Customers, Editor, Contactus, Aboutus } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -65,18 +65,20 @@ const App = () => {
 
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/ecommerce" element={(<Ecommerce />)} />
+                <Route path="/" element={(<Home />)} />
+                <Route path="/Home" element={(<Home />)} />
 
                 {/* pages  */}
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/Projects" element={<Projects />} />
+                <Route path="/Members" element={<Members />} />
+                <Route path="/Customers" element={<Customers />} />
 
                 {/* apps  */}
-                {/* <Route path="http://localhost:4000" element={"http://localhost:4000"} /> */}
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/calendar" element={<Calendar />} />
+                {/* <Route path="/kanban" element={<Kanban />} /> */}
+                <Route path="/Editor" element={<Editor />} />
+                <Route path="/Calendar" element={<Calendar />} />
+                <Route path="/Contactus" element={<Contactus />} />
+                <Route path="/Aboutus" element={<Aboutus />} />
 
               </Routes>
             </div>

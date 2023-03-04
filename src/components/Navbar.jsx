@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
-// import { BsChatLeft } from 'react-icons/bs';
-// import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import avatar from '../data/avatar.jpg';
-import { Chat, Notification, UserProfile } from '.';
+import UserProfile from './UserProfile';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
@@ -54,15 +52,6 @@ const Navbar = () => {
 
       <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
       <div className="flex">
-        {/* <NavButton title="Cart" customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} /> */}
-        {/* <NavButton content="About Us" customFunc={() => handleClick('')} /> */}
-        <span className="text-gray-400 font-bold ml-1 text-14">
-        About Us
-        </span>
-        <span className="text-gray-400 font-bold ml-1 text-14">
-        Contact Us
-        </span>
-        {/* <NavButton content="Contact Us"  customFunc={() => handleClick('')} />  */}
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
@@ -74,8 +63,6 @@ const Navbar = () => {
               alt="user-profile"
             />
             <p>
-              {/* <span className="text-gray-400 text-14">
-              </span>{' '} */}
               <span className="text-gray-400 font-bold ml-1 text-14">
                 Demo
               </span>
@@ -83,10 +70,6 @@ const Navbar = () => {
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
-
-        {/* {isClicked.cart && (<Cart />)} */}
-        {/* {isClicked.chat && (<Chat />)} */}
-        {/* {isClicked.notification && (<Notification />)} */}
         {isClicked.userProfile && (<UserProfile />)}
       </div>
     </div>
